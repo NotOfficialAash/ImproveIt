@@ -1,40 +1,46 @@
 #include <iostream>
 #include <windows.h>
 #include <thread>
-#include <ios>
 #include <limits>
 #pragma comment(lib, "Winmm.lib")
 
 using namespace std;
 
-void countdown(int maxTime) {
+void countdown(float maxTime) {
 	char dismiss = 'N';
-	for (int i = maxTime * 60 ; i > 0; i--) {
+	for (float i = maxTime * 60 ; i > 0; i = i--) {
 		this_thread::sleep_for(1000ms);
 	}
 
 	mciSendString(L"open \"time_up_sound.mp3\" type mpegvideo alias timeUpSound", NULL, 0, NULL);
 	mciSendString(L"play timeUpSound from 0 to 1500 repeat", NULL, 0, NULL);
-	cout << dismiss;
 	
-
-	while (dismiss != 'D') {
-		cout << "\nYour session time has expires. Take a break. Type D to dismiss and close.\n";
-		cin.get(dismiss);
-	}
+	cout << "\nYour session time has expires. Take a break. Type d to dismiss and close.\n";
+	cin >> ws;
+	cin.get(dismiss);
 
 	mciSendString(L"stop timeUpSound", NULL, 0, NULL);
 	mciSendString(L"close timeUpSound", NULL, 0, NULL);
 }
 
 
+void launcher() {
+	for (int i = 0; i < 100; i++) {
+		cout << "Hi";
+	}
+}
+
+
 int main(){
-	int sessionDuration;
+	float sessionDuration;
 	cout << "Enter SESSION TIME in MINUTES: \n";
+	cin >> ws;
 	cin >> sessionDuration;
 
 	thread timerThread(countdown, sessionDuration);
+	thread launcherThread(launcher);
 
 	timerThread.join();
+	launcherThread.join();
 
 }
