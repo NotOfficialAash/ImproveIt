@@ -1,2 +1,7 @@
 ﻿  ImproveIt.cpp
-D:\Programming\C++\Launcher\Launcher\ImproveIt.cpp(43,3): error C3861: 'oProgram': identifier not found
+  Launcher.cpp
+  Generating code
+  Compiler switch has changed, fall back to full compilation.
+  All 259 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Launcher.vcxproj -> D:\Programming\C++\Launcher\Executables\Release\x64\ImproveIt.exe
