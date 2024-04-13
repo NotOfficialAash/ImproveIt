@@ -1,7 +1,0 @@
-﻿  ImproveIt.cpp
-  Launcher.cpp
-  Generating code
-  Compiler switch has changed, fall back to full compilation.
-  All 259 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Finished generating code
-  Launcher.vcxproj -> D:\Programming\C++\Launcher\Executables\Release\x64\ImproveIt.exe
