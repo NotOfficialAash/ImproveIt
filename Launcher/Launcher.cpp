@@ -1,13 +1,16 @@
-void addProgram() {
+#include <iostream>
+#include <thread>
 
+using namespace std;
+
+void oProgram() {
+	cout << "oProgram" << endl;
 }
 
-
-void removeProgram() {
-
+void aProgram() {
+	cout << "aProgram" << endl;
 }
 
-
-void openProgram() {
-
+void rProgram() {
+	cout << "rProgram" << endl;
 }
