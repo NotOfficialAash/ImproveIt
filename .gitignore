@@ -1,1 +1,4 @@
 .vs/
+Launcher/Release/
+Launcher/Debug/
+Launcher/Launcher.vcxproj.user
